@@ -24,6 +24,7 @@ body{
 }
 
 .timer-display{
+    color: black;
     position: relative;
     width: 92%;
     background: #fff;
