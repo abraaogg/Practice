@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.progress-ring{
+    width: 200;
+    height: 200;
+}
+
+.progress-ring_circle{
+    stroke: white;
+    stroke-width: 8;
+    fill: transparent;
+    r: 90;
+    cx: 100;
+    cy: 100;
+}
