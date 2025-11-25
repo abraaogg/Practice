@@ -54,7 +54,7 @@ h1 {
   position: relative;
 }
 
-.input-box input::-webkit-calendar-picker-indicator{
+.input-box input::-webkit-calendar-picker-indicator {
   top: 0;
   left: 0;
   right: 0;
@@ -62,8 +62,8 @@ h1 {
   width: auto;
   height: auto;
   position: absolute;
-  background-position: calc(100% - 10PX);
-  background-size: 30PX;
+  background-position: calc(100% - 10px);
+  background-size: 30px;
   cursor: pointer;
 }
 
@@ -81,4 +81,13 @@ h1 {
 
 .input-box button:hover {
   background: #fdfd46;
+  box-shadow: 2px 2px 8px;
+}
+
+#result{
+  font-size: 20px;
+}
+
+#result span{
+  color: #ffff76;
 }
