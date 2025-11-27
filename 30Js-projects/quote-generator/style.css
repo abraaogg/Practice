@@ -96,6 +96,7 @@ body {
   cursor: pointer;
   user-select: none;
   transition: 0.3s;
+  touch-action: manipulation;
 }
 
 .container button:hover {
