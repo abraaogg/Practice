@@ -1,18 +1,27 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
 
-// New API (1 random quote)
+let loading = false;
+
 const apiUrl = "https://dummyjson.com/quotes/random";
 
 async function getQuote(url) {
-  const response = await fetch(url);
-  const data = await response.json();
+  if (loading) return;
 
-  // DummyJSON format:
-  // { quote: "...", author: "..." }
+  loading = true;
 
-  quote.innerHTML = data.quote;
-  author.innerHTML = data.author;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    quote.innerHTML = data.quote;
+    author.innerHTML = data.author;
+  } catch (error) {
+    quote.innerHTML = "Erro ao carregar a frase.";
+    author.innerHTML = "";
+  }
+
+  loading = false;
 }
 
 getQuote(apiUrl);
