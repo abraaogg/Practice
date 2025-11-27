@@ -112,3 +112,8 @@ body {
   color: #333;
   border: 1px solid #1da1f2;
 }
+
+.container button:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
