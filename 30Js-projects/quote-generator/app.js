@@ -1,16 +1,29 @@
 const quote = document.getElementById("quote");
 const author = document.getElementById("author");
-const apiUrl = "https://zenquotes.io/api/random";
+
+// New API (1 random quote)
+const apiUrl = "https://dummyjson.com/quotes/random";
 
 async function getQuote(url) {
   const response = await fetch(url);
-  var data = await response.json();
-  quote.innerHTML = data.content;
+  const data = await response.json();
+
+  // DummyJSON format:
+  // { quote: "...", author: "..." }
+
+  quote.innerHTML = data.quote;
   author.innerHTML = data.author;
 }
 
 getQuote(apiUrl);
 
 function tweet() {
-  window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + "--- by " + author.innerHTML, "Tweet Window", "width=600, height=300");
+  window.open(
+    "https://twitter.com/intent/tweet?text=" +
+      quote.innerHTML +
+      " — " +
+      author.innerHTML,
+    "Tweet Window",
+    "width=600, height=300"
+  );
 }
