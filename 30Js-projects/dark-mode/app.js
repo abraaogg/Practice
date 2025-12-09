@@ -1,25 +1,13 @@
-const eye = document.getElementById("eye");
-const password = document.getElementById("password");
+let icon = document.getElementById("icon");
 
-eye.addEventListener("click", () => {
-  if (password.type === "password") {
-    password.type = "text";
-    eye.src = "images/eye-slash-solid-full.svg";
+icon.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  if (document.body.classList.contains("dark-theme")) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
   } else {
-    password.type = "password";
-    eye.src = "images/eye-solid-full.svg";
+    icon.classList.remove("fa-sun");
+    icon.classList.add("fa-moon");
   }
 });
-
-/* For eye uimg switch only
-const eye = document.getElementById("eye");
-
-eye.addEventListener("click", () => {
-  if (eye.src.includes("eye-solid-full.svg")) {
-    eye.src = "images/eye-solid-slash.svg"; // new image
-  } else {
-    eye.src = "images/eye-solid-full.svg"; // back to original
-  }
-});
-
-*/
