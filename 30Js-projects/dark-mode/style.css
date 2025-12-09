@@ -19,7 +19,7 @@ body {
   background-color: var(--primary-color);
   position: relative;
   overflow: hidden;
-    user-select: none;
+  user-select: none;
 }
 
 header {
