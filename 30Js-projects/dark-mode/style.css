@@ -20,6 +20,7 @@ body {
   position: relative;
   overflow: hidden;
   user-select: none;
+  transition: all 0.2s;
 }
 
 header {
@@ -136,7 +137,6 @@ footer i {
   color: var(--secondary-color);
   font-size: 20px;
   margin-right: 20px;
-  transition: all 0.5s;
 }
 
 footer i:hover {
