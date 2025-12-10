@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: url(images/background.jpg) center/cover no-repeat;
+  display: flex;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+/* Frosted glass container */
+.container {
+  width: 40%;
+  max-width: 550px;
+  padding: 30px 40px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* perfect centering */
+  align-items: center; /* perfect centering */
+}
+
+.container label:hover {
+  cursor: pointer;
+}
+
+/* Form layout */
+.container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Input group row: label + input side-by-side */
+.input-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: auto;
+}
+
+.input-group input {
+  width: 60%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #1da1f2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1688ce;
+}
