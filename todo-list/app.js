@@ -1,35 +1,39 @@
+const inputBox = document.querySelector("#input-box");
+const listContainer = document.querySelector("#list-container");
 
-document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newTask input').value.length == 0){
-        alert('Please enter a task')
-    } 
-    else{
-        document.querySelector('#tasks').innerHTML += `
+function addTask() {
+  if (inputBox.value === "") {
+    alert("You must write something!");
+  } else {
+    let li = document.createElement("li");
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
 
-        <div class = 'task'>
-        
-            <span id = 'taskname'>
-                ${document.querySelector('#newTask input').value}
-            </span>
-            <button class='delete'>
-            <i class="fa-solid fa-trash"></i>
-            </button>
-        </div>
-        `;
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
 
-        var currentTasks = document.querySelectorAll('.delete');
-        for(var i=0; i<currentTasks.length; i++){
-            currentTasks[i].onclick = function(){
-                this.parentNode.remove()
-            }
-        }
-
-        var tasks = document.querySelectorAll('.task');
-        for(var i=0; i<tasks.length; i++){
-            tasks[i].onclick = function(){
-                this.classList.toggle('completed');
-            }
-        }
-        document.querySelector('#newTask input').value = ''
-    }
+    inputBox.value = "";
+    inputBox.focus();
+    saveData();
+  }
 }
+
+listContainer.addEventListener("click", function (e) {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("checked");
+    saveData();
+  } else if (e.target.tagName === "SPAN") {
+    e.target.parentElement.remove();
+    saveData();
+  }
+});
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
