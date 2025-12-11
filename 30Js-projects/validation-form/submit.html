@@ -15,8 +15,8 @@
         align-items: center; /* center vertically */
         margin: 0; /* remove default margin */
       }
-      h1{
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      h1 {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         color: aliceblue;
         font-size: 6em;
       }
@@ -29,9 +29,12 @@
         confetti({
           particleCount: 500,
           spread: 200,
-          origin: { y: .6 },
+          origin: { y: 0.6 },
         });
       };
+      if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        window.location.href = "index.html";
+      }
     </script>
   </body>
 </html>
