@@ -14,24 +14,16 @@
   <body>
     <div class="container">
       <h1>Validation</h1>
-
-      <form>
+      <form id="form">
         <div class="input-group">
           <label for="name"><i class="fa-solid fa-user"></i></label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
-            required
-          />
+          <input type="text" id="name" placeholder="Enter your name" required />
         </div>
 
         <div class="input-group">
           <label for="phone"><i class="fa-solid fa-phone"></i></label>
           <input
             type="tel"
-            name="phone"
             id="phone"
             placeholder="Phone Number"
             pattern="[0-9]*"
@@ -41,16 +33,10 @@
 
         <div class="input-group">
           <label for="email"><i class="fa-solid fa-envelope"></i></label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            required
-          />
+          <input type="email" id="email" placeholder="Email" required />
         </div>
 
-        <button type="submit"> <a href="submit.html">SUBMIT</a></button>
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
 
