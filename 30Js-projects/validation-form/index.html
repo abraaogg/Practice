@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/154e530372.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/154e530372.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Validation form</title>
   </head>
 
@@ -13,24 +16,41 @@
       <h1>Validation</h1>
 
       <form>
-
         <div class="input-group">
           <label for="name"><i class="fa-solid fa-user"></i></label>
-          <input type="text" name="name" id="name" placeholder="Enter your name" required>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
         </div>
 
         <div class="input-group">
           <label for="phone"><i class="fa-solid fa-phone"></i></label>
-          <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+            pattern="[0-9]*"
+            required
+          />
         </div>
 
         <div class="input-group">
           <label for="email"><i class="fa-solid fa-envelope"></i></label>
-          <input type="email" name="email" id="email" placeholder="Email" required>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
         </div>
 
-        <button type="button">Submit</button>
-
+        <button type="submit"> <a href="submit.html">SUBMIT</a></button>
       </form>
     </div>
 

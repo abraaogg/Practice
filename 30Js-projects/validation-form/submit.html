@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <title>Yay</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex; /* make body a flex container */
+        justify-content: center; /* center horizontally */
+        align-items: center; /* center vertically */
+        margin: 0; /* remove default margin */
+      }
+      img {
+        max-width: 90%; /* optional: prevents overflow */
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://t4.ftcdn.net/jpg/11/80/23/53/360_F_1180235355_hzyweFZmPn7qax4hpfjKsDK9nAx7nH4L.jpg"
+      alt=""
+    />
+
+    <script>
+      window.onload = () => {
+        confetti({
+          particleCount: 500,
+          spread: 200,
+          origin: { y: .6 },
+        });
+      };
+    </script>
+  </body>
+</html>

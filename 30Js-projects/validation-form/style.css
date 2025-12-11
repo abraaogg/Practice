@@ -4,14 +4,22 @@
   box-sizing: border-box;
 }
 
+:root{
+  --color1: #DD8DE2;
+  --color2: #697DD6;
+  --color3: #5354CE;
+  --color4: #4A3ABC;
+}
+
 body {
   height: 100vh;
-  background: url(images/background.jpg) center/cover no-repeat;
+  background: url(images/background1.jpg) center/cover no-repeat;
   display: flex;
 }
 
 h1 {
   font-size: 2em;
+  color: aliceblue;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -24,12 +32,16 @@ h1 {
   padding: 30px 40px;
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center; /* perfect centering */
   align-items: center; /* perfect centering */
+}
+
+.container label{
+  color: var(--color1);
 }
 
 .container label:hover {
@@ -66,16 +78,23 @@ h1 {
 
 /* Button */
 button {
+  width: 30%;
   margin-top: 10px;
   padding: 12px;
-  background-color: #1da1f2;
+  background-color: var(--color3);
   border: none;
   color: white;
-  font-size: 16px;
+  font-size: 12px;
   border-radius: 6px;
   cursor: pointer;
+  transition: .1s all;
 }
 
-button:hover {
-  background-color: #1688ce;
+button:active {
+  background-color: var(--color2);
+}
+
+button a{
+  color: aliceblue;
+  text-decoration: none;
 }
