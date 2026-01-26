@@ -30,11 +30,20 @@ function App() {
       date: date.toLocaleDateString(),
     };
     const newNotes = [...notes, newNote];
-    SetNotes(newNotes)
+    SetNotes(newNotes);
+  };
+
+  const deleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    SetNotes(newNotes);
   };
   return (
     <div className="container">
-      <NotesList notes={notes} handleAddNote={addNote} />
+      <NotesList
+        notes={notes}
+        handleAddNote={addNote}
+        handleDeleteNote={deleteNote}
+      />
     </div>
   );
 }
